@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-mongoose.connect("mongodb://navatha:lallu17489@ds219641.mlab.com:19641/post_app");
+mongoose.connect("mongodb://<dbuser>:<dbpassword>.mlab.com:19641/post_app");
 
 let postSchema = new mongoose.Schema({
     title: String,
