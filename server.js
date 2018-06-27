@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-mongoose.connect("mongodb://localhost/post_app");
+mongoose.connect("mongodb://navatha:lallu17489@ds219641.mlab.com:19641/post_app");
 
 let postSchema = new mongoose.Schema({
     title: String,
@@ -45,4 +45,4 @@ app.get("/new/:id", (req, res) => {
         }
     });
 });
-app.listen(3000, () => console.log("working"));
+app.listen(process.env.PORT||3000, () => console.log("working"));
